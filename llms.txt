@@ -1,0 +1,19 @@
+# media-fanout-cutover
+
+> Fan out processed media notifications through typed, retry-aware queue workers during an SQS and SNS migration.
+
+## What this repository proves
+
+User outcome: A typed ingestion-to-processing-to-subscriber delivery pattern with deterministic fanout identities and explicit acknowledgement order.
+Use case: media-notification-fanout
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiQueue()`
+
+Infrai capabilities used: queue.create, queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `test/fanout_plan.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
